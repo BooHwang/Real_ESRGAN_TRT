@@ -78,7 +78,7 @@ class REALESGAN(nn.Module):
         self.model = self.model.to(self.device)
         self.model = self.model.half()
         
-    # @torch.no_grad()
+    @torch.no_grad()
     def forward(self, img):
         h = img.shape[2]
         img = img / 255.
